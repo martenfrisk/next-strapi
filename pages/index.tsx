@@ -17,7 +17,7 @@ const IndexPage = ({ data }: { data: any}) => {
 
         ))}
         <Link href="/about">
-          <a className="text-red-700">About</a>
+          <a className="text-red-500">About</a>
         </Link>
       </p>
     </Layout>
