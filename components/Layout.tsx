@@ -8,32 +8,21 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
+  <div className="font-serif text-coolgray-800">
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-      <nav>
+    <header className="flex justify-center w-full mt-4">
+      <div className="mb-6 text-2xl tracking-wide cursor-pointer sm:text-5xl font-rozha">
         <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
-      </nav>
+          <a>Store</a>
+        </Link>
+      </div>
     </header>
     {children}
     <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
     </footer>
   </div>
 )

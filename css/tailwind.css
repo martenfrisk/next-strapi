@@ -4,3 +4,35 @@
 
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply min-h-screen bg-coolgray-50;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
+@font-face {
+  font-family: Sansation;
+  font-style: normal;
+  font-weight: normal;
+  src: local('Sansation_Regular'), url(/fonts/Sansation_Regular.woff), format('woff');
+}
+@font-face {
+  font-family: SansationBold;
+  font-style: normal;
+  font-weight: bold;
+  src: local('Sansation_Bold'), url(/fonts/Sansation_Bold.woff), format('woff');
+}
+@font-face {
+  font-family: SansationLight;
+  font-style: normal;
+  font-weight: lighter;
+  src: local('Sansation_Light'), url(/fonts/Sansation_Light.woff), format('woff');
+}
+
+.hover-trigger hover-target {
+  display: none;
+}
+.hover-trigger:hover hover-target {
+  display: block;
+}

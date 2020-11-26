@@ -8,3 +8,15 @@ export type User = {
   id: number
   name: string
 }
+
+export type ProductType = {
+  id: number,
+  imgsrc: { 
+    src: string[] 
+  }, 
+  name: string,
+  slug: string,
+  price: number,
+  description: string,
+  category: string,
+}

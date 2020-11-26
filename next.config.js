@@ -5,14 +5,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const nextConfig = {
+  env: {
+    API_URL: 'https://next-testbutik.herokuapp.com'
+  },
   target: 'serverless',
   images: {
     loader: 'cloudinary',
     path: 'https://res.cloudinary.com/dyxbjaih4/'
-  },
-  env: {
-    NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN:
-      process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
   },
 };
 
