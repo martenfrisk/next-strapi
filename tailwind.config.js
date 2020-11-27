@@ -47,6 +47,7 @@ module.exports = {
   variants: {
     extend: {
       display: ['group-hover', 'hover', 'responsive', 'focus'],
+      textColor: ['group-hover', 'hover']
     }
   },
   plugins: [],
