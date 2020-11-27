@@ -13,6 +13,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="Description" content="Next.js test ecommerce site with Strapi backend" />
     </Head>
     <header className="flex justify-center w-full mt-4">
       <div className="mb-6 text-2xl tracking-wide cursor-pointer sm:text-5xl font-rozha">

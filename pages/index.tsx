@@ -102,7 +102,7 @@ const IndexPage = ({ data }: { data: any }) => {
               <div>New</div>
               <div>Search</div>
               <div>Cart</div>
-              <div className="w-full text-xs text-center sm:pt-3 sm:text-lg sm:-ml-2 sm:w-auto text-coolgray-400">Products</div>
+              <div className="w-full text-xs text-center sm:pt-3 sm:text-lg sm:-ml-2 sm:w-auto text-coolgray-500">Products</div>
               <div className={`cursor-pointer ${category === 'Plant' && 'pl-1 py-2 font-semibold'}`} onClick={() => setCategory('Plant')}>Plants</div>
               <div  className={`cursor-pointer ${category === 'Chair' && 'pl-1 py-2 font-semibold'}`} onClick={() => setCategory('Chair')}>Chairs</div>
               <div  className={`cursor-pointer ${category === 'Camera' && 'pl-1 py-2 font-semibold'}`} onClick={() => setCategory('Camera')}>Cameras</div>
