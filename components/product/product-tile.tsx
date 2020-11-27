@@ -22,7 +22,7 @@ const ProductTile = ({ product, index }: { product: ProductType; index: number }
     setVisible(true);
   };
   let position;
-  switch (index) {
+  switch (index % 4) {
     case 0:
       position = "col-span-1 sm:col-span-4 col-start-1 row-span-5";
       break;
@@ -35,13 +35,13 @@ const ProductTile = ({ product, index }: { product: ProductType; index: number }
       break;
     case 3:
       position =
-        "col-span-1 sm:col-span-3 col-start-2 sm:col-start-5 row-span-4 row-start-5";
+        "col-span-1 sm:col-span-3 col-start-2 sm:col-start-5 row-span-4";
       break;
     default:
       break;
   }
   return (
-    <div key={product.id} className={` ${position} cursor-pointer`}>
+    <div key={product.slug} className={` ${position} cursor-pointer productitem`} style={{ opacity: '100%', transition: 'opacity 2s ease-out' }}>
       <Link href={`/product/${product.slug}`}>
         <div className="relative z-0 flex flex-wrap items-end w-auto h-full max-w-4xl overflow-hidden sm:w-full hover-trigger">
           <ImageComponent
@@ -49,8 +49,8 @@ const ProductTile = ({ product, index }: { product: ProductType; index: number }
             alt={`Picture of ${product.name}`}
           />
           <div
-            className="z-10 flex flex-wrap items-center justify-between w-full px-2 pt-10 -mt-4 text-sm font-light bg-opacity-25 text-coolgray-400 font-sansa hover-side"
-            style={{ mixBlendMode: "difference" }}
+            className="z-10 flex flex-wrap items-center justify-between w-full px-2 pt-10 -mt-4 text-sm text-coolgray-400 font-sansa hover-side"
+            style={{ mixBlendMode: 'difference' }}
           >
             <p className="uppercase">{product.name}</p>
             <p className="tracking-tight ">{product.price}:-</p>
@@ -103,6 +103,14 @@ const ProductTile = ({ product, index }: { product: ProductType; index: number }
             transform: translateY(-4rem);
             transition: transform 0.4s ease-out;
           }
+          .productitem:last-child:nth-child(odd) {
+            grid-column: auto / span 7;
+          }
+          .productitem:last-child:nth-child(even) {
+            grid-row-end: -1;
+          }
+          
+
         `}
       </style>
     </div>

@@ -37,7 +37,7 @@ const IndexPage = ({ data }: { data: any }) => {
               </div>
               <div
                 className={`cursor-pointer ${
-                  category === "Plant" && "pl-1 py-2 font-semibold"
+                  category === "Plant" && "py-2 font-semibold"
                 }`}
                 onClick={() => setCategory("Plant")}
               >
@@ -45,7 +45,7 @@ const IndexPage = ({ data }: { data: any }) => {
               </div>
               <div
                 className={`cursor-pointer ${
-                  category === "Chair" && "pl-1 py-2 font-semibold"
+                  category === "Chair" && "py-2 font-semibold"
                 }`}
                 onClick={() => setCategory("Chair")}
               >
@@ -53,7 +53,7 @@ const IndexPage = ({ data }: { data: any }) => {
               </div>
               <div
                 className={`cursor-pointer ${
-                  category === "Camera" && "pl-1 py-2 font-semibold"
+                  category === "Camera" && "py-2 font-semibold"
                 }`}
                 onClick={() => setCategory("Camera")}
               >
@@ -61,10 +61,10 @@ const IndexPage = ({ data }: { data: any }) => {
               </div>
             </div>
           </div>
-          <div className="grid w-full h-screen max-w-2xl grid-cols-2 gap-2 p-2 mt-4 sm:mt-10 sm:grid-cols-7 sm:w-2/3 bg-coolgray-300">
+          <div className="grid w-full h-screen max-w-2xl grid-flow-row-dense grid-cols-2 gap-2 p-2 mt-4 sm:mt-10 sm:grid-cols-7 sm:w-3/4 bg-coolgray-300">
             {items.map((product: ProductType, index: number) => (
               <ProductTile product={product} index={index} />
-            ))}
+              ))}
           </div>
         </div>
       </div>
