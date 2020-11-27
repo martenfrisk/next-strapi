@@ -17,7 +17,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     <header className="flex justify-center w-full mt-4">
       <div className="mb-6 text-2xl tracking-wide cursor-pointer sm:text-5xl font-rozha">
         <Link href="/">
-          <a>Store</a>
+          <a><h1>Store</h1></a>
         </Link>
       </div>
     </header>

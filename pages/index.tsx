@@ -29,8 +29,8 @@ const Tile = ({product, index}: {product: ProductType, index: number}) => {
       className={` ${position} cursor-pointer`}
     >
       <Link href={`/product/${product.slug}`}>
-        <div className="relative z-0 flex flex-wrap items-end w-full h-full overflow-hidden hover-trigger">
-          <Image src={product.imgsrc.src[0]} layout="fill" objectFit="cover" />
+        <div className="relative z-0 flex flex-wrap items-end w-64 h-full max-w-4xl overflow-hidden sm:w-full hover-trigger">
+          <Image src={product.imgsrc.src[0]} layout="fill" alt={`Picture of ${product.name}`} objectFit="cover" />
           <div
             className="z-10 flex flex-wrap items-center justify-between w-full px-2 pt-10 -mt-4 text-sm font-light bg-opacity-25 text-coolgray-400 font-sansa hover-side"
             style={{ mixBlendMode: "difference" }}
@@ -93,7 +93,7 @@ const IndexPage = ({ data }: { data: any }) => {
     <Layout title="Home | Next.js + TypeScript Example">
       <div className="flex flex-wrap justify-center w-full mb-32">
         <div className="relative hidden w-full h-48 max-w-4xl mx-20 sm:block">
-          <Image src="strapi/hero2.jpg" layout="fill" objectFit="cover" />
+          <Image src="strapi/hero2.jpg" alt="Plants and frames" layout="fill" objectFit="cover" />
         </div>
         <div className="flex flex-col justify-between w-full max-w-4xl sm:flex-row">
           <div className="w-full px-4 sm:px-0 sm:ml-4 sm:w-20 sm:mt-10">
